@@ -7,7 +7,6 @@ A skeleton of a module pattern.
 ```js
 var myModule = (function () {
   var fn = {};
-  var o = {};
 
   fn.init = function(options) {
     // Do something
