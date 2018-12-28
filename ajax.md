@@ -14,23 +14,10 @@ fetch('api/?page=api&action=edit', {
   headers: {
     "Content-Type": "Content-Type: application/json"
 },
-}).then(function(response) {
+}).then((response) => {
   return response.text();
-}).then(function(text) {
+}).then((text) => {
   var array = JSON.parse(text);
   console.log(array);
 });
-```
-
-### Check if JSON is valid
-
-```js
-function isJson(str) {
-  try {
-    JSON.parse(str);
-  } catch (e) {
-    return false;
-  }
-  return true;
-}
 ```

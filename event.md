@@ -16,3 +16,24 @@ document.addEventListener('click', function(event) {
   }
 });
 ```
+
+## Shorthand for event
+
+```js
+function event(selector, event, action) {
+  let elements = document.querySelectorAll(selector);
+  elements.forEach((element) => {
+    element.addEventListener(event, function(e) {
+      let args = {};
+
+      args.el = e.target;
+
+      action(args);
+    });
+  });
+};
+
+event('.my_class', 'click', (args) => {
+  console.log(args);
+});
+```
